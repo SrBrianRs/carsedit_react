@@ -1,26 +1,30 @@
 .contenedorDeMiniatura {
+  
   width: 60%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  margin: 100px 50px;
+  margin: 100px 30px;
 }
 
 .miniatura {
+  
   width: 30%; /* para mostrar 3 tarjetas por fila */
   margin-bottom: 20px; /* ajusta el valor de acuerdo a tus neces60idades */
-  margin-right: 10px;
+  margin-right: 20px;
+  margin-left: 15%;
 }
 
 @media screen and (min-width: 768px) {
   /* para pantallas con un ancho mínimo de 768px */
   .miniatura {
-    width: 25%; /* para mostrar 4 tarjetas por fila */
+    width: 55%; /* para mostrar 4 tarjetas por fila */
   }
 }
 
 .card {
+  
   position: relative;
   overflow: hidden;
   border-radius: 20px;
@@ -35,8 +39,11 @@
 
 .video-container {
   position: relative;
-  padding-bottom: 75%; /* relación de aspecto de 16:9 */
+  padding-bottom: 20%; /* relación de aspecto de 16:9 */
+  padding-left: 10%;
 }
+
+
 
 .video {
   position: absolute;
@@ -45,6 +52,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  
 }
 
 .title {
