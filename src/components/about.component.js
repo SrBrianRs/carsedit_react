@@ -17,7 +17,7 @@ function Profile() {
         
           </div>
           <div class="profile-header">
-            <h4>Proyecto en el cual se suben videos a firebase para poder acceder a ellos mediante una aplicacion web realizada en React</h4>
+            <h4>Proyecto en el cual se suben videos a Firebase para poder acceder a ellos mediante una aplicacion web realizada en React</h4>
             
             
             
