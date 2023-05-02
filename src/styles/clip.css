@@ -1,8 +1,8 @@
 .clip-container {
-    position: fixed;
+    position: absolute;
     top:70px;
     right: 0;
-    width: 40%;
+    width: 50%;
     /* el ancho restante */
     height: 100vh;
     /* altura del 100% del viewport */
@@ -25,11 +25,11 @@
     /* color de fondo para asegurar que no se superponga a otros elementos */
     box-sizing: border-box;
     /* para incluir el padding y el borde dentro del ancho y la altura */
-    padding: 10px;
+    padding: 100px;
   }
   
   .video-container {
-    margin-top: 0px;
+    margin-top: px;
     width: 100%;
     /* para ajustar el ancho del contenedor de video al 100% del componente */
     height: 70%;
@@ -38,6 +38,8 @@
     /* para poder posicionar el video de forma absoluta */
   }
   
+  
+
   .video-container video {
     position: absolute;
     /* para posicionar el video de forma absoluta */
@@ -51,6 +53,7 @@
     /* para cubrir el contenedor de video sin deformar la imagen */
     box-shadow: 0 0 20px rgb(0, 0, 0);
   }
+  
   
   .reactions {
     display: flex;
