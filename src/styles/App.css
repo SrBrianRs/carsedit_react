@@ -16,7 +16,7 @@ li a{
 nav {
 margin: 27px auto 0;
 position: relative;
-width: 310px;
+width: 410px;
 height: 50px;
 background-color: #cfd0d1;
 border-radius: 8px;
@@ -52,6 +52,9 @@ width: 100px;
 a:nth-child(3) {
 width: 100px;
 }
+a:nth-child(4) {
+  width: 100px;
+  }
 
 nav .start-home, a:nth-child(1):hover~.animation {
 width: 100px;
@@ -68,6 +71,11 @@ width: 100px;
 left: 210px;
 background-color: #3498db;
 }
+nav .start-blog, a:nth-child(4):hover~.animation {
+  width: 100px;
+  left: 310px;
+  background-color: #db34cd;
+  }
 
 body {
 font-size: 12px;

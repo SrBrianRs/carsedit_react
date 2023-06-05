@@ -3,6 +3,7 @@ import ClipsDataService from "../services/carsedit.service";
 import '../styles/clip.css'
 import ReactionsComponent from "./reacciones.component";
 import CommentsComponent from "./comentarios.component";
+import { Routes, Route, Link } from "react-router-dom";
 
 export default class Clip extends Component {
   constructor(props) {
@@ -115,6 +116,7 @@ export default class Clip extends Component {
 
   render() {
     const { currentClip } = this.state;
+    const user = localStorage.getItem('user');
 
     return (
       <div className="clip-container">
@@ -129,16 +131,42 @@ export default class Clip extends Component {
                   </video>
                 </div>
                 <h4>{currentClip.title}</h4>
-                < ReactionsComponent />
-                < CommentsComponent />
+
+
+
+                {user ?
+                  <>
+                    <ReactionsComponent
+                      id={currentClip.id}
+                    />
+                    <CommentsComponent
+                      id={currentClip.id} />
+                  </>
+                  :
+                  <div className="section">
+                    <h5>Inicia sesion para poder comentar y reaccionar</h5>
+                    <Link class="google-login-button" to={"/add"}>
+                      <span class="icon"></span>
+                      Iniciar sesión con Google
+                    </Link>
+                  </div>
+                }
+
+
+
+
+
+
+
+
               </form>
             </div>
 
           ) : (
             <div className="espacio">
               <br />
-              
-              
+
+
             </div>
           )}
         </div>
