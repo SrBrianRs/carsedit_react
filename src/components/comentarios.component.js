@@ -9,19 +9,19 @@ const CommentsComponent = ({ id }) => {
   const uri = "https://api-reac-comment-service-kafka-srbrianrs.cloud.okteto.net/api/comments"
 
   useEffect(() => {
+    const fetchComments = async () => {
+      try {
+        const response = await axios.get(`${uri}/${id}`);
+        const comentarios = response.data ? response.data : [];
+  
+        setComentarios(comentarios);
+      } catch (error) {
+        console.log('Error al obtener los comentarios:', error);
+      }
+    };
+
     fetchComments();
-  }, []);
-
-  const fetchComments = async (r) => {
-    try {
-      const response = await axios.get(`${uri}/${id}`);
-      const comentarios = response.data ? response.data : [];
-
-      setComentarios(comentarios);
-    } catch (error) {
-      console.log('Error al obtener los comentarios:', error);
-    }
-  };
+  }, [id]);
 
   const comment = (e, status) => {
     const user = localStorage.getItem('user');
@@ -56,12 +56,7 @@ const CommentsComponent = ({ id }) => {
       <div className="comments-list">
         {comentarios.map((comentario) => (
           <div className="comment" key={comentario._id}>
-            <h5>{comentario.userId} <h6>{comentario.comment}</h6>
-            
-            
-            
-            </h5>
-            
+            <h5>{comentario.userId} <h6>{comentario.comment}</h6></h5>
           </div>
         ))}
       </div>
