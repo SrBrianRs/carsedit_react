@@ -3,7 +3,7 @@ import ClipsDataService from "../services/carsedit.service";
 import '../styles/clip.css'
 import ReactionsComponent from "./reacciones.component";
 import CommentsComponent from "./comentarios.component";
-import { Routes, Route, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 
 export default class Clip extends Component {
   constructor(props) {

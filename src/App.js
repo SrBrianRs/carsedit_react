@@ -3,7 +3,6 @@ import { Routes, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./styles/App.css";
 
-import AddCarsEdit from "./components/add-carsedit.component";
 import CarsEditsList from "./components/carsedits-list.component";
 import Profile from "./components/about.component";
 import Login from "./Google-login/Login";
